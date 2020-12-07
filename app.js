@@ -3,9 +3,8 @@ const express = require('express'); //Import the package
 const app = express(); //We execute the package
 
 //Middlewares (A function that executes when a specific route is hit)
-app.use('/posts', () => {
-    console.log('This is a middleware running');
-});
+const productRouter = require("./routes/product.js");
+app.use('/product', productRouter);
 
 //ROUTES
 //"Get" sends us back a message 
